@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+   <link rel="stylesheet" href="./style.css">
+   <title>동천아, 생일 축하해!</title>
+</head>
+
+<body>
+   <div class="main-container container text-center my-4">
+      <div class="card">
+         <div class="card-body p-4">
+            <h2 class="card-title title">🎊🎉 Happy BirthDay! 🎉🎊</h2>
+            <p class="card-text mt-4 subText">3월 9일 오늘은 <strong>신.동.천</strong>에 생일입니다.<br>
+               🐰2023년에는 🌻꽃길만 걸으세요~</p>
+            <!-- <p class="mt-4 subText2" style="font-weight: bold;">
+               Show 버튼을 눌러보세요.</p> -->
+            <a href="#" class="rand-btn btn btn-success mt-4 p-2">more</a>
+         </div>
+         <div class="alert alert-light w-75 my-4" role="alert">
+            <p class="m-0 goods-name"></p>
+            <div class="goods-img-container">
+               <h5 class="card-text mt-4 subText">생일 축하하고, 건강해라~<br></h5>
+               <!-- <h3 style="color: black; margin-top: 100px;"> 범지원(16세)</h3> -->
+               <img src="./동천1.jpg" alt="" class="goods-img w-50 m-4">
+               <h5 style="color: black; font-weight: bolder;">신동천 교복 폼 미쳤다!</h5>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+      </script>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+      </script>
+   <script>
+      let cnt = 0;
+      var randomNum1 = Math.floor(Math.random() * 6);
+      $('.rand-btn').click(function () {
+         
+         cnt++;
+
+         if(cnt % 2 == 0){
+            $('.rand-btn').removeClass('btn-danger');
+            $('.rand-btn').html('more');
+         }
+         else{
+            $('.rand-btn').addClass('btn-danger');
+            $('.rand-btn').html('close');
+         }
+
+         $('.goods-name').html('');
+         
+         var b = '<img src="./" alt="" class="goods-img w-50 m-4">';
+         let goods = [1, 2, 3, 4, 5, 6]
+
+         $('.alert').toggle('a');
+         // $('.goods-name').html(`'${goods[randomNum1]}번' 🎁선물 뽑으셨습니다.`);
+      })
+   </script>
+</body>
+
+</html>

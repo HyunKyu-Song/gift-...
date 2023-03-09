@@ -1,0 +1,58 @@
+.card {
+   background-color: #eee;
+}
+
+.title {
+   /* color: #eee; */
+   font-weight: bolder;
+
+}
+
+.title:hover {
+   transform: scale(1.1);
+   color: coral;
+   transition: all 2;
+}
+
+.subText{
+   color: black;
+   font-weight: bold;
+}
+
+.subText:hover {
+   transform: scale(1.1);
+   color: coral;
+   transition: all 2;
+}
+
+.subText2:hover {
+   transform: scale(1.1);
+   color: coral;
+   transition: all 2;
+}
+
+.btn:hover {
+   color: black;
+}
+
+.goods-name {
+   font-weight: bold;
+   font-size: larger;
+   color: black;
+
+}
+
+.alert {
+   margin: auto;
+   display: none;
+   border: 2px solid black;
+   /* transition: all 0.8s; */
+}
+
+.a {
+   display: none;
+}
+
+.goods-img {
+   border-radius: 15px;
+}
